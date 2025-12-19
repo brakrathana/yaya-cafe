@@ -1,0 +1,322 @@
+/* Premium Slideshow Styles */
+.premium-slideshow {
+    max-width: 1000px;
+    margin: 40px auto;
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    background: #111;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.subtitle {
+    display: block;
+    font-size: 18px;
+    color: #666;
+    margin-top: 10px;
+    font-family: 'Khmer OS', sans-serif;
+}
+
+.slides-container {
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+}
+
+.premium-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transform: scale(1.05); /* ថយពី 1.1 ទៅ 1.05 */
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1); /* ថយពី 1.2s ទៅ 0.8s */
+    z-index: 1;
+}
+
+.premium-slide.active {
+    opacity: 1;
+    transform: scale(1);
+    z-index: 2;
+}
+
+.slide-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.7) 100%);
+    z-index: 1;
+}
+
+.slide-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 5s ease-out; /* ថយពី 10s ទៅ 5s */
+}
+
+.premium-slide.active .slide-image {
+    transform: scale(1.03); /* ថយពី 1.05 ទៅ 1.03 */
+}
+
+.slide-content {
+    position: absolute;
+    bottom: 60px;
+    left: 60px;
+    color: rgb(255, 255, 255);
+    z-index: 3;
+    max-width: 600px;
+    opacity: 0;
+    transform: translateY(20px); /* ថយពី 30px ទៅ 20px */
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.2s; /* ថយពី 0.8s ទៅ 0.6s, delay 0.2s */
+}
+
+.premium-slide.active .slide-content {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.slide-number {
+    font-size: 14px;
+    color: rgba(255,255,255,0.7);
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+    font-weight: 300;
+}
+
+.slide-title {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    font-family: 'Khmer OS', 'Noto Sans Khmer', sans-serif;
+    line-height: 1.2;
+}
+
+.slide-description {
+    font-size: 18px;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.9);
+    font-family: 'Khmer OS', 'Noto Sans Khmer', sans-serif;
+}
+
+/* Progress Bar */
+.progress-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: rgba(255,255,255,0.1);
+    z-index: 4;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(to right, #FF6B6B, #FFD166);
+    transition: width 2s linear; /* ថយពី 3s ទៅ 2s */
+}
+
+/* Navigation Dots */
+.navigation-dots {
+    position: absolute;
+    bottom: 30px;
+    right: 60px;
+    display: flex;
+    gap: 12px;
+    z-index: 4;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.3);
+    cursor: pointer;
+    transition: all 0.2s ease; /* ថយពី 0.3s ទៅ 0.2s */
+    position: relative;
+}
+
+.dot.active {
+    background: #FFD166;
+    transform: scale(1.3);
+    box-shadow: 0 0 10px rgba(255,209,102,0.5);
+}
+
+.dot:hover {
+    background: rgba(255,255,255,0.8);
+    transform: scale(1.2);
+}
+
+/* Mini Thumbnails */
+.mini-thumbnails {
+    position: absolute;
+    right: 60px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 4;
+}
+
+.thumb {
+    width: 70px;
+    height: 70px;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    opacity: 0.5;
+    transform: scale(0.9);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* ថយពី 0.4s ទៅ 0.3s */
+    border: 2px solid transparent;
+}
+
+.thumb.active {
+    opacity: 1;
+    transform: scale(1.1);
+    border-color: #FFD166;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.thumb:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
+}
+
+.thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Slide Counter */
+.slide-counter {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 24px;
+    color: #333;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+.current-slide {
+    font-weight: 700;
+    color: #FF6B6B;
+}
+
+.separator {
+    margin: 0 10px;
+    opacity: 0.5;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    .premium-slideshow {
+        max-width: 95%;
+    }
+    
+    .slides-container {
+        height: 500px;
+    }
+    
+    .slide-content {
+        left: 40px;
+        bottom: 40px;
+        max-width: 500px;
+    }
+    
+    .slide-title {
+        font-size: 36px;
+    }
+    
+    .mini-thumbnails {
+        right: 30px;
+    }
+    
+    .thumb {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .slides-container {
+        height: 400px;
+    }
+    
+    .slide-content {
+        left: 30px;
+        bottom: 30px;
+        max-width: 400px;
+    }
+    
+    .slide-title {
+        font-size: 28px;
+    }
+    
+    .slide-description {
+        font-size: 16px;
+    }
+    
+    .mini-thumbnails {
+        right: 20px;
+        gap: 8px;
+    }
+    
+    .thumb {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .navigation-dots {
+        right: 30px;
+        bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .slides-container {
+        height: 300px;
+    }
+    
+    .slide-content {
+        left: 20px;
+        bottom: 20px;
+        max-width: 280px;
+    }
+    
+    .slide-title {
+        font-size: 22px;
+    }
+    
+    .slide-description {
+        font-size: 14px;
+    }
+    
+    .mini-thumbnails {
+        display: none;
+    }
+    
+    .navigation-dots {
+        right: 50%;
+        transform: translateX(50%);
+        bottom: 15px;
+    }
+    
+    .slide-counter {
+        margin-top: 20px;
+        font-size: 20px;
+    }
+}
+
+/* Animation Keyframes - បានដកចេញព្រោះមិនត្រូវការ */

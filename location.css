@@ -1,0 +1,229 @@
+.location {
+     --primary: #6F4E37;
+    --secondary: #F5F5DC;
+    --accent: #2E8B57;
+    --text: #3E2723;
+    --light: #F5DEB3;
+    --white: #FFFFFF;
+    --shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 80px 0;
+    text-align: center;
+}
+
+.location-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+}
+
+.location-info {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.location-details h3 {
+    color: #000000;
+    font-size: 28px;
+    margin-bottom: 25px;
+    font-family: 'Koulen', sans-serif;
+    text-align: center;
+}
+
+.contact-info {
+    margin-bottom: 30px;
+    text-align: center;
+    width: 100%;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    gap: 15px;
+}
+
+.info-item i {
+    color: #6b4423;
+    font-size: 18px;
+    min-width: 20px;
+}
+
+.info-text {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    text-align: center;
+    align-items: center;
+}
+
+.opening-hours {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    text-align: center;
+    width: 100%;
+}
+
+.opening-hours h4 {
+    color: #6b4423;
+    margin-bottom: 15px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.opening-hours ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.opening-hours li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.opening-hours li:last-child {
+    border-bottom: none;
+}
+
+.day {
+    display: inline-block;
+    min-width: 120px;
+    text-align: left;
+}
+
+.time {
+    color: #6b4423;
+    font-weight: 600;
+    text-align: right;
+}
+
+.facilities {
+    background: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    text-align: center;
+    width: 100%;
+}
+
+.facilities h4 {
+    color: #6b4423;
+    margin-bottom: 15px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.facilities-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    justify-items: center;
+}
+
+.facility-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px;
+    border-radius: 5px;
+    background: #ffffff;
+    width: 100%;
+    max-width: 200px;
+}
+
+.facility-item i {
+    color: #6b4423;
+    font-size: 16px;
+}
+
+/* លុប .location-map និងស្តាយីលដែលពាក់ព័ន្ធ */
+.location-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.contact-info, .opening-hours, .facilities {
+    width: 100%;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .location-info {
+        gap: 40px;
+    }
+    
+    .facilities-list {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .location {
+        padding: 60px 0;
+    }
+    
+    .opening-hours li {
+        flex-direction: column;
+        gap: 5px;
+        align-items: center;
+    }
+    
+    .day {
+        min-width: auto;
+        text-align: center;
+    }
+    
+    .time {
+        text-align: center;
+    }
+    
+    .facilities-list {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+    
+    .facility-item {
+        max-width: 100%;
+    }
+}
+
+/* បន្ថែមស្តាយីលដើម្បីធានាថាអក្សរទាំងអស់ចូលកណ្តាល */
+.location h2,
+.location h3,
+.location h4,
+.location p,
+.location span,
+.location li,
+.location a {
+    text-align: center !important;
+}
+
+.info-item .info-text p {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}

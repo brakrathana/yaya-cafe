@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ហាងកាហ្វេយ៉ាយ៉ា | YAYA Cafe</title>
+    <link rel="shortcut icon" type="cafe-icon" href="top.jpg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600&family=Battambang:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="README.md">
+    <link rel="stylesheet" href="stylemobile.css">
+    <link rel="stylesheet" href="location.css">
+    <link rel="stylesheet" href="Thumbnail.css">
+    <link rel="stylesheet" href="order.css">
+    <link rel="stylesheet" href="cart-toggle.css">
+    <link rel="stylesheet" href="main.js">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-coffee"></i>
+                <div class="logo-text">
+                    <span class="logo-khmer">យ៉ាយ៉ាកាហ្វេ</span>
+                    <span class="logo-english">YAYA Coffee</span>
+                </div>
+            </div>
+
+            <div class="nav-menu">
+                <a href="#home" class="nav-link active"><i class="fas fa-home"></i> <span>Home</span></a>                
+                <a href="#menu" class="nav-link"><i class="fas fa-coffee"></i> <span>Menu</span></a>
+                <a href="#resume" class="nav-link"><i class="fas fa-file-alt"></i> <span>About</span></a>
+                <a href="#testimonial" class="nav-link"><i class="fas fa-star"></i> <span>Testimonial</span></a>
+                <a href="#contact" class="nav-link"><i class="fas fa-phone"></i> <span>Contact</span></a>
+            </div>
+
+            <div class="nav-controls">
+                <button class="lang-toggle" id="langToggle">
+                    
+                    <span class="lang-text khmer">ខ្មែរ</span>
+                </button>
+                <button class="cart-toggle" id="cartToggle">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#home" class="mobile-nav-link active"><i class="fas fa-home"></i> <span>Home</span></a>
+        <a href="#menu" class="mobile-nav-link"><i class="fas fa-coffee"></i> <span>Menu</span></a>
+        <a href="#resume" class="mobile-nav-link"><i class="fas fa-file-alt"></i> <span>About</span></a>
+        <a href="#testimonial" class="mobile-nav-link"><i class="fas fa-star"></i> <span>Testimonial</span></a>
+        <a href="#contact" class="mobile-nav-link"><i class="fas fa-phone"></i> <span>Contact</span></a>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="khmer-text">សូមស្វាគមន៍មកកាន់ហាងកាហ្វេយ៉ាយ៉ា</span>
+             <span class="english-text">Welcome to​ YAYA Coffee</span>
+            </h1>
+            <p class="hero-subtitle">
+                <span class="khmer-text">កាហ្វេគុណភាពពីខ្ពង់រាបរតនះគិរី</span>
+                <span class="english-text">Premium Coffee from Ratanakiri Highlands</span>
+            </p>
+            <div class="hero-buttons">
+                <a href="#menu" class="btn btn-primary">
+                    <i class="fas fa-book"></i>
+                    <span class="btn-text">View Menu</span>
+                </a>
+                <button class="btn btn-secondary" id="orderNowBtn">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="btn-text">Order Now</span>
+                </button>
+            </div>
+        </div>
+        <div class="floating-beans">
+            <div class="bean bean1">☕</div>
+            <div class="bean bean2">☕</div>
+            <div class="bean bean3">☕</div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="section menu">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="khmer-text">ម៉ឺនុយកាហ្វេ</span>
+                <span class="english-text">Coffee Menu</span>
+            </h2>
+            
+            <!-- Menu Categories -->
+           <!-- Menu Hero Section -->
+    <section class="menu-hero">
+        <div class="container">
+            <h1 class="khmer-text">ម៉ឺនុយកាហ្វេពិសេស</h1>
+            <p class="khmer-text">ស្វែងរកកាហ្វេដ៏ពិសេសពីហាងយើងខ្ញុំ</p>
+            
+            <div class="menu-search">
+                <div style="position: relative;">
+                    <input type="text" class="search-input" placeholder="ស្វែងរកកាហ្វេ...">
+                    <button class="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Menu Categories -->
+
+
+    <!-- Menu Grid -->
+    <div class="container">
+        <div class="menu-grid" id="menuGrid">
+            <!-- Coffee Item 1 -->
+            <div class="menu-card" data-category="espresso hot">
+                <div class="menu-card-badge">ពេញនិយម</div>
+                <button class="favorite-btn">
+                    <i class="far fa-heart"></i>
+                </button>
+                <img src="កាហ្វេខ្មៅ.png" 
+                     alt="Espresso" class="menu-card-image">
+                <div class="menu-card-content">
+                    <div class="menu-card-title">
+                        <h3 class="menu-card-name khmer-text">កាហ្វេទឹកកកក្តៅ</h3>
+                        <span class="menu-card-price">$2.00</span>
+                    </div>
+                    <p class="menu-card-description khmer-text">កាហ្វេសុទ្ធដ៏រសជាតិខ្លាំងសម្រាប់ថ្ងៃដែលអ្នកត្រូវការថាមពល</p>
+                    <div class="menu-card-meta">
+                        <span><i class="fas fa-thermometer-half"></i> ក្តៅ</span>
+                        <span><i class="fas fa-clock"></i> រហ័ស</span>
+                    </div>
+                    <div class="menu-card-actions">
+                        <div class="quantity-control">
+                            <button class="qty-btn minus">-</button>
+                            <span class="qty-value">1</span>
+                            <button class="qty-btn plus">+</button>
+                        </div>
+                        <button class="add-to-cart-btn">
+                            <i class="fas fa-cart-plus"></i>
+                            <span>បន្ថែម</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+                <!-- Coffee Item 2 -->
+            <div class="menu-card" data-category="espresso hot">
+                <div class="menu-card-badge">ពេញនិយម</div>
+                <button class="favorite-btn">
+                    <i class="far fa-heart"></i>
+                </button>
+                <img src="កាហ្វេទឹកដោះគោ.png" 
+                     alt="Espresso" class="menu-card-image">
+                <div class="menu-card-content">
+                    <div class="menu-card-title">
+                        <h3 class="menu-card-name khmer-text">កាហ្វេទឹកដោះគោ</h3>
+                        <span class="menu-card-price">$1.25</span>
+                    </div>
+                    <p class="menu-card-description khmer-text">កាហ្វេសុទ្ធដ៏រសជាតិខ្លាំងសម្រាប់ថ្ងៃដែលអ្នកត្រូវការថាមពល</p>
+                    <div class="menu-card-meta">
+                        <span><i class="fas fa-thermometer-half"></i> ក្តៅ</span>
+                        <span><i class="fas fa-clock"></i> រហ័ស</span>
+                    </div>
+                    <div class="menu-card-actions">
+                        <div class="quantity-control">
+                            <button class="qty-btn minus">-</button>
+                            <span class="qty-value">1</span>
+                            <button class="qty-btn plus">+</button>
+                        </div>
+                        <button class="add-to-cart-btn">
+                            <i class="fas fa-cart-plus"></i>
+                            <span>បន្ថែម</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Coffee Item 3 -->
+            <div class="menu-card" data-category="latte hot">
+                <button class="favorite-btn">
+                    <i class="far fa-heart"></i>
+                </button>
+                <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                     alt="Latte" class="menu-card-image">
+                <div class="menu-card-content">
+                    <div class="menu-card-title">
+                        <h3 class="menu-card-name khmer-text">កាហ្វេឡាត់ត៍ក្តៅ</h3>
+                        <span class="menu-card-price">$3.50</span>
+                    </div>
+                    <p class="menu-card-description khmer-text">កាហ្វេឡាត់ត៍ដ៏រសជាតិឆ្ងាញ់ជាមួយទឹកដោះគោស្រស់</p>
+                    <div class="menu-card-meta">
+                        <span><i class="fas fa-thermometer-half"></i> ក្តៅ</span>
+                        <span><i class="fas fa-wind"></i> មានពពុះ</span>
+                    </div>
+                    <div class="menu-card-actions">
+                        <div class="quantity-control">
+                            <button class="qty-btn minus">-</button>
+                            <span class="qty-value">1</span>
+                            <button class="qty-btn plus">+</button>
+                        </div>
+                        <button class="add-to-cart-btn">
+                            <i class="fas fa-cart-plus"></i>
+                            <span>បន្ថែម</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Coffee Item 3 -->
+            <div class="menu-card" data-category="cappuccino hot">
+                <button class="favorite-btn">
+                    <i class="far fa-heart"></i>
+                </button>
+                <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                     alt="Cappuccino" class="menu-card-image">
+                <div class="menu-card-content">
+                    <div class="menu-card-title">
+                        <h3 class="menu-card-name khmer-text">កាប់ភូឈីណូ</h3>
+                        <span class="menu-card-price">$3.75</span>
+                    </div>
+                    <p class="menu-card-description khmer-text">កាប់ភូឈីណូជាមួយពពុះទឹកដោះគោដ៏ស្រស់ និងហិច</p>
+                    <div class="menu-card-meta">
+                        <span><i class="fas fa-thermometer-half"></i> ក្តៅ</span>
+                        <span><i class="fas fa-wind"></i> ពពុះច្រើន</span>
+                    </div>
+                    <div class="menu-card-actions">
+                        <div class="quantity-control">
+                            <button class="qty-btn minus">-</button>
+                            <span class="qty-value">1</span>
+                            <button class="qty-btn plus">+</button>
+                        </div>
+                        <button class="add-to-cart-btn">
+                            <i class="fas fa-cart-plus"></i>
+                            <span>បន្ថែម</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Coffee Item 4 -->
+            <div class="menu-card" data-category="cold special">
+                <div class="menu-card-badge">ថ្មី!</div>
+                <button class="favorite-btn">
+                    <i class="far fa-heart"></i>
+                </button>
+                <img src="https://images.unsplash.com/photo-1534778101976-62847782c213?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                     alt="Iced Coffee" class="menu-card-image">
+                <div class="menu-card-content">
+                    <div class="menu-card-title">
+                        <h3 class="menu-card-name khmer-text">កាហ្វេត្រជាក់ពិសេស</h3>
+                        <span class="menu-card-price">$4.25</span>
+                    </div>
+                    <p class="menu-card-description khmer-text">កាហ្វេត្រជាក់ឆ្ងាញ់ជាមួយទឹកក្តៅ និងការរៀបចំពិសេស</p>
+                    <div class="menu-card-meta">
+                        <span><i class="fas fa-snowflake"></i> ត្រជាក់</span>
+                        <span><i class="fas fa-star"></i> ពិសេស</span>
+                    </div>
+                    <div class="menu-card-actions">
+                        <div class="quantity-control">
+                            <button class="qty-btn minus">-</button>
+                            <span class="qty-value">1</span>
+                            <button class="qty-btn plus">+</button>
+                        </div>
+                        <button class="add-to-cart-btn">
+                            <i class="fas fa-cart-plus"></i>
+                            <span>បន្ថែម</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Coffee Item 5 -->
+            <div class="menu-card" data-category="americano hot">
+                <button class="favorite-btn">
+                    <i class="far fa-heart"></i>
+                </button>
+                <img src="https://images.unsplash.com/photo-1568649929103-28ffbefaca1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                     alt="Americano" class="menu-card-image">
+                <div class="menu-card-content">
+                    <div class="menu-card-title">
+                        <h3 class="menu-card-name khmer-text">អាមេរីកាណូ</h3>
+                        <span class="menu-card-price">$2.75</span>
+                    </div>
+                    <p class="menu-card-description khmer-text">អេស្ព្រេសូជាមួយទឹកក្តៅ សម្រាប់អ្នកចូលចិត្តកាហ្វេសុទ្ធ</p>
+                    <div class="menu-card-meta">
+                        <span><i class="fas fa-thermometer-half"></i> ក្តៅ</span>
+                        <span><i class="fas fa-tint"></i> ទឹកច្រើន</span>
+                    </div>
+                    <div class="menu-card-actions">
+                        <div class="quantity-control">
+                            <button class="qty-btn minus">-</button>
+                            <span class="qty-value">1</span>
+                            <button class="qty-btn plus">+</button>
+                        </div>
+                        <button class="add-to-cart-btn">
+                            <i class="fas fa-cart-plus"></i>
+                            <span>បន្ថែម</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Coffee Item 6 -->
+            <div class="menu-card" data-category="special organic">
+                <div class="menu-card-badge">សរីរាង្គ</div>
+                <button class="favorite-btn">
+                    <i class="far fa-heart"></i>
+                </button>
+                <img src="តែក្រហមទឹកដោះគោ.png" 
+                     alt="Special Coffee" class="menu-card-image">
+                <div class="menu-card-content">
+                    <div class="menu-card-title">
+                        <h3 class="menu-card-name khmer-text">តែក្រហមទឹកដោះគោ</h3>
+                        <span class="menu-card-price">$1.50</span>
+                    </div>
+                    <p class="menu-card-description khmer-text">តែក្រហមទឹកដោះគោពិសេសជាតែផលិតដោយស្នាដៃកូនខ្មែរ</p>
+                    <div class="menu-card-meta">
+                        <span><i class="fas fa-leaf"></i> សរីរាង្គ</span>
+                        <span><i class="fas fa-star"></i> ពិសេស</span>
+                    </div>
+                    <div class="menu-card-actions">
+                        <div class="quantity-control">
+                            <button class="qty-btn minus">-</button>
+                            <span class="qty-value">1</span>
+                            <button class="qty-btn plus">+</button>
+                        </div>
+                        <button class="add-to-cart-btn">
+                            <i class="fas fa-cart-plus"></i>
+                            <span>បន្ថែម</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+             <!-- Coffee Item 7 -->
+            <div class="menu-card" data-category="special organic">
+                <div class="menu-card-badge">សរីរាង្គ</div>
+                <button class="favorite-btn">
+                    <i class="far fa-heart"></i>
+                </button>
+                <img src="តែបៃតង.png" 
+                     alt="Special Coffee" class="menu-card-image">
+                <div class="menu-card-content">
+                    <div class="menu-card-title">
+                        <h3 class="menu-card-name khmer-text">តែបៃតង</h3>
+                        <span class="menu-card-price">$1.50</span>
+                    </div>
+                    <p class="menu-card-description khmer-text">តែបៃតងពិសេសជាតែផលិតដោយស្នាដៃកូនខ្មែរ</p>
+                    <div class="menu-card-meta">
+                        <span><i class="fas fa-leaf"></i> សរីរាង្គ</span>
+                        <span><i class="fas fa-star"></i> ពិសេស</span>
+                    </div>
+                    <div class="menu-card-actions">
+                        <div class="quantity-control">
+                            <button class="qty-btn minus">-</button>
+                            <span class="qty-value">1</span>
+                            <button class="qty-btn plus">+</button>
+                        </div>
+                        <button class="add-to-cart-btn">
+                            <i class="fas fa-cart-plus"></i>
+                            <span>បន្ថែម</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+             <!-- Coffee Item 8 -->
+            <div class="menu-card" data-category="special organic">
+                <div class="menu-card-badge">សរីរាង្គ</div>
+                <button class="favorite-btn">
+                    <i class="far fa-heart"></i>
+                </button>
+                <img src="តែក្រូចឆ្មា.png" 
+                     alt="Special Coffee" class="menu-card-image">
+                <div class="menu-card-content">
+                    <div class="menu-card-title">
+                        <h3 class="menu-card-name khmer-text">តែក្រូចឆ្មា</h3>
+                        <span class="menu-card-price">$1</span>
+                    </div>
+                    <p class="menu-card-description khmer-text">តែក្រូឆ្មាពិសេសជាតែផលិតដោយស្នាដៃកូនខ្មែរ</p>
+                    <div class="menu-card-meta">
+                        <span><i class="fas fa-leaf"></i> សរីរាង្គ</span>
+                        <span><i class="fas fa-star"></i> ពិសេស</span>
+                    </div>
+                    <div class="menu-card-actions">
+                        <div class="quantity-control">
+                            <button class="qty-btn minus">-</button>
+                            <span class="qty-value">1</span>
+                            <button class="qty-btn plus">+</button>
+                        </div>
+                        <button class="add-to-cart-btn">
+                            <i class="fas fa-cart-plus"></i>
+                            <span>បន្ថែម</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add more coffee items as needed -->
+        </div>
+    </div>
+
+    <!-- Coffee Types Section -->
+    <section class="coffee-types">
+        <div class="container">
+            <h2 class="section-title khmer-text">ប្រភេទកាហ្វេរបស់យើង</h2>
+            <div class="type-grid">
+                <div class="type-card">
+                    <div class="type-icon">
+                        <i class="fas fa-mountain"></i>
+                    </div>
+                    <h3 class="khmer-text">កាហ្វេភ្នំ</h3>
+                    <p class="khmer-text">ពីតំបន់ភ្នំរតនះគីរី</p>
+                </div>
+                <div class="type-card">
+                    <div class="type-icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <h3 class="khmer-text">សរីរាង្គ</h3>
+                    <p class="khmer-text">កាហ្វេសរីរាង្គ ១០០%</p>
+                </div>
+                <div class="type-card">
+                    <div class="type-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3 class="khmer-text">គុណភាពខ្ពស់</h3>
+                    <p class="khmer-text">ការជ្រើសរើសដោយអ្នកជំនាញ</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Offers -->
+    <section class="special-offers">
+        <div class="container">
+            <h2 class="section-title khmer-text">ការផ្តល់ជូនពិសេស</h2>
+            <div class="offer-card">
+                <h3 class="khmer-text">ទិញ ២ ទទួល ១ ឥតគិតថ្លៃ!</h3>
+                <p class="khmer-text">ទិញកាហ្វេ ២ កែវ ទទួលបានកាហ្វេ ១ កែវឥតគិតថ្លៃ</p>
+                <p><small>មានសុពលភាពរហូតដល់ថ្ងៃទី២៦ ខែសីហា ឆ្នាំ២០២៦</small></p>
+            </div>
+        </div>
+    </section>
+        </div>
+    </div>
+            <!-- Menu Items -->
+            <div class="menu-items" id="menuItems">
+                <!-- Menu items will be loaded by JavaScript -->
+            </div>
+    </section>
+
+        <!-- Thumbnail images -->  
+    <section id="resume" class="section resume"> 
+    <section id="resume" class="section resume"></section>
+    <div class="container">
+        <h2 class="section-title">
+            <span class="khmer-text">ទីតាំងនៅក្នុងហាងកាហ្វេ</span>
+            <span class="subtitle">សូមទស្សនាបរិយាកាសដ៏កក់ក្តៅនិងទំនើបរបស់យើង</span>
+        </h2>
+        
+        <!-- Premium Slideshow Container -->
+        <div class="premium-slideshow">
+            <!-- Slides Container -->
+            <div class="slides-container">
+                <!-- Slide 1 -->
+                <div class="slide premium-slide active">
+                    <div class="slide-overlay"></div>
+                    <img src="មុខហាង.png" alt="ទីតាំងក្នុងហាងកាហ្វេ 1" class="slide-image">
+                    <div class="slide-content">
+                        <div class="slide-number">01</div>
+                        <div class="slide-title">ទីតាំងខាងមុខហាង</div>
+                        <div class="slide-description">ទទួលភ្ញៀវដោយភាពទាក់ទាញនិងអារម្មណ៍សុខសាន្ត</div>
+                    </div>
+                </div>
+                
+                <!-- Slide 2 -->
+                <div class="slide premium-slide">
+                    <div class="slide-overlay"></div>
+                    <img src="ក្នុងហា.png" alt="ទីតាំងក្នុងហាងកាហ្វេ 2" class="slide-image">
+                    <div class="slide-content">
+                        <div class="slide-number">02</div>
+                        <div class="slide-title">បរិយាកាសខាងក្នុងហាង</div>
+                        <div class="slide-description">ការរចនាទំនើបជាមួយពន្លឺធម្មជាតិនិងផ្កាឈើស្រស់</div>
+                    </div>
+                </div>
+                
+                <!-- Slide 3 -->
+                <div class="slide premium-slide">
+                    <div class="slide-overlay"></div>
+                    <img src="ក្នុងហា.png" alt="ទីតាំងក្នុងហាងកាហ្វេ 3" class="slide-image">
+                    <div class="slide-content">
+                        <div class="slide-number">03</div>
+                        <div class="slide-title">តុបណ្តោយបង្អួច</div>
+                        <div class="slide-description">ទិដ្ឋភាពល្អនៃរដូវឆ្នាំនិងពន្លឺធម្មជាតិ</div>
+                    </div>
+                </div>
+                
+                <!-- Slide 4 -->
+                <div class="slide premium-slide">
+                    <div class="slide-overlay"></div>
+                    <img src="តុអង្គុយ.png" alt="ទីតាំងក្នុងហាងកាហ្វេ 4" class="slide-image">
+                    <div class="slide-content">
+                        <div class="slide-number">04</div>
+                        <div class="slide-title">តុសម្រាប់ក្រុម</div>
+                        <div class="slide-description">កន្លែងសម្រាប់កិច្ចប្រជុំ ការងារ និងការស្វែងរកការសប្បាយរួម</div>
+                    </div>
+                </div>
+                
+                <!-- Slide 5 -->
+                <div class="slide premium-slide">
+                    <div class="slide-overlay"></div>
+                    <img src="មុខហាង.png" alt="ទីតាំងក្នុងហាងកាហ្វេ 5" class="slide-image">
+                    <div class="slide-content">
+                        <div class="slide-number">05</div>
+                        <div class="slide-title">តុសម្រាប់គូស្នេហ៍</div>
+                        <div class="slide-description">កន្លែងឯកជនសម្រាប់គូស្នេហ៍និងការជួបជុំពិសេស</div>
+                    </div>
+                </div>
+                
+                <!-- Slide 6 -->
+                <div class="slide premium-slide">
+                    <div class="slide-overlay"></div>
+                    <img src="cafe-interior5.jpg" alt="ទីតាំងក្នុងហាងកាហ្វេ 6" class="slide-image">
+                    <div class="slide-content">
+                        <div class="slide-number">06</div>
+                        <div class="slide-title">កន្លែងអង្គុយសម្រាប់ស្ម័គ្រចិត្ត</div>
+                        <div class="slide-description">កៅអីទំនើបដែលងាយស្រួលសម្រាប់ការអាននិងការងារ</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Progress Bar -->
+            <div class="progress-container">
+                <div class="progress-bar"></div>
+            </div>
+            
+            <!-- Navigation Dots -->
+            <div class="navigation-dots">
+                <span class="dot active" data-slide="0"></span>
+                <span class="dot" data-slide="1"></span>
+                <span class="dot" data-slide="2"></span>
+                <span class="dot" data-slide="3"></span>
+                <span class="dot" data-slide="4"></span>
+                <span class="dot" data-slide="5"></span>
+            </div>
+            
+            <!-- Mini Thumbnails -->
+            <div class="mini-thumbnails">
+                <div class="thumb active" data-slide="0">
+                    <img src="មុខហាង.png" alt="ទីតាំងខាងមុខហាង">
+                </div>
+                <div class="thumb" data-slide="1">
+                    <img src="ក្នុងហា.png" alt="បរិយាកាសខាងក្នុងហាង">
+                </div>
+                <div class="thumb" data-slide="2">
+                    <img src="មុខហាង.png" alt="តុបណ្តោយបង្អួច">
+                </div>
+                <div class="thumb" data-slide="3">
+                    <img src="ក្នុងហា.png" alt="តុសម្រាប់ក្រុម">
+                </div>
+                <div class="thumb" data-slide="4">
+                    <img src="មុខហាង.png" alt="តុសម្រាប់គូស្នេហ៍">
+                </div>
+                <div class="thumb" data-slide="5">
+                    <img src="តុអង្គុយ.png" alt="កន្លែងអង្គុយសម្រាប់ស្ម័គ្រចិត្ត">
+                </div>
+            </div>
+        </div>
+        
+        <!-- Slide Counter -->
+        <div class="slide-counter">
+            <span class="current-slide">01</span>
+            <span class="separator">/</span>
+            <span class="total-slides">06</span>
+        </div>
+    </div>
+</section>
+   
+
+    <!-- Testimonial Section -->
+    <section id="testimonial" class="section testimonial">
+    <div class="container">
+        <h2 class="section-title">
+            <span data-en="Customer Reviews" data-kh="មតិអតិថិជន">មតិអតិថិជន</span>
+        </h2>
+        <p class="section-subtitle">
+            <span data-en="What our customers say about us" data-kh="អ្វីដែលអតិថិជនយើងនិយាយអំពីយើង">អ្វីដែលអតិថិជនយើងនិយាយអំពីយើង</span>
+        </p>
+        
+        <div class="testimonial-slider"></div>
+           
+           
+            <!-- Testimonial 1 -->
+            <div class="testimonial-item active">
+                <div class="testimonial-content">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        <span data-en="The best coffee in Ratanakiri! The taste of pure mountain coffee is amazing. I come here every morning." data-kh="កាហ្វេល្អបំផុតនៅរតនគិរី! រសជាតិកាហ្វេភ្នំសុទ្ធគឺអស្ចារ្យណាស់។ ខ្ញុំមកទីនេះរាល់ព្រឹក។">កាហ្វេល្អបំផុតនៅរតនគិរី! រសជាតិកាហ្វេភ្នំសុទ្ធគឺអស្ចារ្យណាស់។ ខ្ញុំមកទីនេះរាល់ព្រឹក។</span>
+                    </p>
+                    <div class="customer-info">
+                        <div class="customer-avatar">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <div class="customer-details">
+                            <h4 class="customer-name">ឌី សុគន្ធា</h4>
+                            <p class="customer-title">
+                                <span data-en="Regular Customer" data-kh="អតិថិជនទៀងទាត់">អតិថិជនទៀងទាត់</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="testimonial-item">
+                <div class="testimonial-content">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        <span data-en="I love the special Ratanakiri coffee blend! The service is excellent and the atmosphere is very cozy." data-kh="ខ្ញុំចូលចិត្តកាហ្វេរតនគិរីពិសេសនេះណាស់! សេវាកម្មល្អឥតខ្ចោះ ហើយបរិយាកាសក៏កក់ក្តៅដែរ។">ខ្ញុំចូលចិត្តកាហ្វេរតនគិរីពិសេសនេះណាស់! សេវាកម្មល្អឥតខ្ចោះ ហើយបរិយាកាសក៏កក់ក្តៅដែរ។</span>
+                    </p>
+                    <div class="customer-info">
+                        <div class="customer-avatar">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <div class="customer-details">
+                            <h4 class="customer-name">ប្រាក់ រតនា</h4>
+                            <p class="customer-title">
+                                <span data-en="Tourist" data-kh="ទេសចរណ៍">ទេសចរណ៍</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+           
+
+        <!-- Slider Controls -->
+        <div class="slider-controls">
+            <button class="slider-btn prev-btn">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <div class="slider-dots">
+                <span class="dot active" data-slide="0"></span>
+                <span class="dot" data-slide="1"></span>
+                <span class="dot" data-slide="2"></span>
+                <span class="dot" data-slide="3"></span>
+            </div>
+            <button class="slider-btn next-btn">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+</section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="khmer-text">ទំនាក់ទំនង</span>
+                <span class="english-text">Contact</span>
+            </h2>
+
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" placeholder="Your Phone">
+                        </div>
+                        <div class="form-group">
+                            <select id="subject" required>
+                                <option value="">Select Subject</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="catering">Catering Service</option>
+                                <option value="feedback">Feedback</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary submit-btn">
+                            <span class="btn-text">Send Message</span>
+                            <div class="loading-spinner"></div>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section id="location" class="section location">
+    <div class="container">
+        <h2 class="section-title">
+            <span class="khmer-text">ទីតាំងនិងម៉ោងដំណើរការ</span><br>
+            <span class="english-text">Opening Hours</span>
+        </h2>
+        
+        <div class="location-content">
+            <div class="location-info">
+                <div class="location-details">
+                    <h3>
+                        <span class="khmer-text">យ៉ាយ៉ាកាហ្វេ</span>
+                        <span class="english-text">YAYA COFFE</span>
+                    </h3>
+                    
+                    <div class="contact-info">
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="info-text">
+                                <span class="khmer-text">ផ្ទះលេខ១,ផ្លូវលំុំ,ភូមិព្រែកតាគង់,សង្គាត់ព្រែកតាសេក<br>ខណ្ឌជ្រោយចង្វារ,រាជធានីភ្នំពេញ</span>
+                            </div>
+                        </div>
+
+                     <div class="info-item">
+                        <div class="info-text">
+                    <div class="opening-hours">
+                        <h4>
+                            <span class="khmer-text">ម៉ោងដំណើរការ</span>
+                            <span class="english-text">Opening Hours</span>
+                        </h4>
+                        <ul>
+                            <li>
+                                <span class="day khmer-text">ច័ន្ទ - សុក្រ</span>
+                                <span class="day english-text">Monday - Friday</span>
+                                <span class="time">07:00 - 21:00</span>
+                            </li>
+                            <li>
+                                <span class="day khmer-text">សៅរ៍</span>
+                                <span class="day english-text">Saturday</span>
+                                <span class="time">08:00 - 22:00</span>
+                            </li>
+                            <li>
+                                <span class="day khmer-text">អាទិត្យ</span>
+                                <span class="day english-text">Sunday</span>
+                                <span class="time">08:00 - 20:00</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="facilities">
+                        <h4>
+                            <span class="khmer-text">សេវាកម្ម</span>
+                            <span class="english-text">Facilities</span>
+                        </h4>
+                        <div class="facilities-list">
+                            <span class="facility-item">
+                                <i class="fas fa-wifi"></i>
+                                <span class="khmer-text">WiFi ឥតគិតថ្លៃ</span>
+                                <span class="english-text">Free WiFi</span>
+                            </span>
+                            <span class="facility-item">
+                                <i class="fas fa-car"></i>
+                                <span class="khmer-text">កន្លែងចតរថយន្ត</span>
+                                <span class="english-text">Parking</span>
+                            </span>
+                            <span class="facility-item">
+                                <i class="fas fa-plug"></i>
+                                <span class="khmer-text">ព្រីភ្លើង</span>
+                                <span class="english-text">Power Outlets</span>
+                            </span>
+                            <span class="facility-item">
+                                <i class="fas fa-snowflake"></i>
+                                <span class="khmer-text">ម៉ាស៊ីនត្រជាក់</span>
+                                <span class="english-text">Air Conditioning</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Shopping Cart -->
+    <!-- Order/Cart Modal -->
+<div class="order-modal" id="orderModal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3>
+                <span class="khmer-text">បញ្ជាទិញកាហ្វេ</span>
+                <span class="english-text">Coffee Order</span>
+            </h3>
+            <button class="modal-close" id="modalClose">&times;</button>
+        </div>
+        <div class="modal-body">
+            <!-- Cart content will be dynamically inserted here -->
+        </div>
+        <div class="modal-footer">
+            <form id="orderForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <input type="text" id="orderName" placeholder="ឈ្មោះពេញ" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="orderPhone" placeholder="លេខទូរស័ព្ទ" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <textarea id="orderNote" placeholder="កំណត់ចំណាំបន្ថែម (បើមាន)" rows="2"></textarea>
+                </div>
+                <div class="form-group">
+                    <select id="orderType" required>
+                        <option value="">ជ្រើសរើសប្រភេទកម្មង់</option>
+                        <option value="pickup">នៅហាង</option>
+                        <option value="delivery">ដឹកជញ្ជូន</option>
+                    </select>
+                </div>
+                <div class="order-total">
+                    <span class="khmer-text">សរុប៖</span>
+                    <span class="english-text">Total:</span>
+                    <span class="total-amount">$0.00</span>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">
+                    <i class="fas fa-paper-plane"></i>
+                    <span class="khmer-text">ផ្ញើកម្មង់</span>
+                    <span class="english-text">Place Order</span>
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+   <!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <!-- Brand Column -->
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <i class="fas fa-mug-hot"></i>
+                    <div class="logo-text">
+                        <h3 class="khmer-text">YAYA COFFE</h3>
+                        <p class="tagline" data-en="Pure Mountain Coffee" data-kh="កាហ្វេភ្នំសុទ្ធពីរតនះគីរី">កាហ្វេភរតនះគីរី</p>
+                    </div>
+                </div>
+                <p class="footer-description" data-en="Experience the authentic taste of Ratanakiri mountain coffee. Fresh, organic, and delicious!" data-kh="ស្វែងយល់ពីរសជាតិពិតប្រាកដនៃកាហ្វេភ្នំរតនះគីរី។ ស្រស់ សរីរាង្គ និងឆ្ងាញ់!">ស្វែងយល់ពីរសជាតិពិតប្រាកដនៃកាហ្វេភ្នំរតនះគីរី។ ស្រស់ សរីរាង្គ និងឆ្ងាញ់!</p>
+                <div class="social-links">
+                    <a href="#" class="social-link" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://t.me/Ag_Rathana_23" class="social-link" aria-label="Telegram">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                    <a href="tel:+855969659090" class="social-link" aria-label="Phone">
+                        <i class="fas fa-phone"></i>
+                    </a>
+                    <a href="https://maps.app.goo.gl/nhW2i6NZPYWgJJ9H7" class="social-link" aria-label="Location" target="_blank">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Quick Links Column -->
+            <div class="footer-links">
+                <h4 data-en="Quick Links" data-kh="តំណរហ័ស">តំណរហ័ស</h4>
+                <ul>
+                    <li><a href="#home" data-en="Home" data-kh="ទំព័រដើម">ទំព័រដើម</a></li>
+                    <li><a href="#menu" data-en="Menu" data-kh="ម៉ឺនុយ">ម៉ឺនុយ</a></li>
+                    <li><a href="#about" data-en="About Us" data-kh="អំពីយើង">អំពីយើង</a></li>
+                    <li><a href="#testimonial" data-en="Reviews" data-kh="មតិវិភាគ">មតិវិភាគ</a></li>
+                    <li><a href="#contact" data-en="Contact" data-kh="ទំនាក់ទំនង">ទំនាក់ទំនង</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info Column -->
+            <div class="footer-contact">
+                <h4 data-en="Contact Info" data-kh="ព័ត៌មានទំនាក់ទំនង">ព័ត៌មានទំនាក់ទំនង</h4>
+                <ul class="contact-info">
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span data-en="Phnom Penh Cambodia" data-kh="រាជធានីភ្នំពេញ កម្ពុជា">រាជធានីភ្នំពេញ</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+855123456789">+855 12 345 6789</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:info@ratanakiricoffee.com">YAYACOFFE@gmail.com</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-clock"></i>
+                        <span data-en="Open Daily: 6:00 AM - 10:00 PM" data-kh="ពេលវេលាបើកដំណើរការ៖ ព្រឹក ៦ រសៀល ១០">ពេលវេលាបើកដំណើរការ៖ ព្រឹក ៦ រសៀល ១០</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Newsletter Column -->
+            <div class="footer-newsletter">
+                <h4 data-en="Stay Updated" data-kh="ទទួលព័ត៌មានថ្មីៗ">ទទួលព័ត៌មានថ្មីៗ</h4>
+                <p data-en="Subscribe to get updates on new coffee blends and promotions" data-kh="ជាវដើម្បីទទួលព័ត៌មានអំពីកាហ្វេថ្មី និងការផ្សព្វផ្សាយ">ជាវដើម្បីទទួលព័ត៌មានអំពីកាហ្វេថ្មី និងការផ្សព្វផ្សាយ</p>
+                <form class="newsletter-form">
+                    <div class="input-group">
+                        <input type="email" placeholder="អ៊ីមែលរបស់អ្នក" data-en="Your Email" data-kh="អ៊ីមែលរបស់អ្នក" required>
+                        <button type="submit" data-en="Subscribe" data-kh="ជាវ">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </form>
+                <div class="payment-methods">
+                    <span data-en="We Accept" data-kh="យើងទទួលយក">យើងទទួលយក</span>
+                    <div class="payment-icons">
+                        <i class="fab fa-cc-visa"></i>
+                        <i class="fab fa-cc-mastercard"></i>
+                        <i class="fab fa-cc-ABA"></i>
+                        <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright & Bottom Bar -->
+        <div class="footer-bottom">
+            <div class="copyright">
+                <p>
+                    <span data-en="© 2023 YAYA Coffee Shop. All rights reserved." data-kh="© ២០២៤ ហាងកាហ្វេយ៉ាយ៉ារក្សាសិទ្ធិគ្រប់យ៉ាង">© ២០២៤ ហាងកាហ្វេរតនះគីរីរក្សាសិទ្ធិគ្រប់យ៉ាង។</span>
+                    <span class="separator">|</span>
+                    <span data-en="Developed with by Brak Rathana" data-kh="បង្កើតនិងអភិវឌ្ឍដោយលោក ប្រាក់ រតនា">បង្កើតដោយក្តីស្រលាញ់ពី ប្រាក់ រតនា</span>
+                </p>
+            </div>
+            <div class="footer-legal">
+                <a href="#" data-en="Privacy Policy" data-kh="គោលការណ៍ភាពឯកជន">គោលការណ៍ភាពឯកជន</a>
+                <span class="separator">|</span>
+                <a href="#" data-en="Terms of Service" data-kh="លក្ខខណ្ឌសេវាកម្មល្អ">លក្ខខណ្ឌសេវាកម្ម</a>
+                <span class="separator">|</span>
+                <a href="#" data-en="Cookie Policy" data-kh="គោលការណ៍ខូចគីយើងសង">គោលការណ៍ខូគី</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script src="menunav.js"></script>
+    <script src="thumbnail.js"></script>
+    <script src="cart-toggle.js"></script>
+    <script src="order.js"></script>
+</body>
+</html> 
